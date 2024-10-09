@@ -26,26 +26,26 @@ function getComputerChoice() {
  * prompt user for input "rock" "paper" "scissors" */
 
 function getHumanChoice() {
-  let choice = selection("rock, paper, scissors", " ");
+  let choice = prompt("rock, paper, scissors", "good luck");
   console.log(choice);
 }
 
-//getHumanChoice();
 
 
-//should probably use humanchoice first so player cannot see computer choice in console and cheat.
 
 humanScore = 0;
 computerScore = 0;
 
 //plays a round of the game. first asking human choice. then displaying computer choice. adds labels to both.
-function playRound(humanChoice, computerChoice) {
-  getHumanChoice(); {
-    console.log("human");
-  }
-  getComputerChoice(); {
-    console.log("computer");
-  }
+///function calls gethumanchoice function then calls getcomputerchoice function logs both results then procee
+///-ds to log name of player. Game is always played Human first.
+//
+//
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+function playRound(humanSelection, computerSelection) {
+
 }
 
-playRound();
