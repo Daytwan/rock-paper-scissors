@@ -4,48 +4,45 @@
  * must be random
  * assign values to rock paper scissors
  * use math.random to generate random numbers between 0-99 for computer choice
- * if getcomputer <= 33 return rock
- * else if getcomputer <= 66 return paper
- * else 
- * return scissors */
+ * */
 
-function getComputerChoice() {
+function getComputerChoice(rock, paper, scissors) {
   let run = Math.random() * 100;
   if (run <= 33) {
-    console.log("rock");
+    return "rock";
   } else if (run <= 66) {
-    console.log("paper");
+    return "paper";
   } else {
-    console.log("scissors");
+    return "scissors";
   }
 } 
 
-//getComputerChoice();
-
-/* getHumanChoice function
- * prompt user for input "rock" "paper" "scissors" */
-
-function getHumanChoice() {
-  let choice = prompt("rock, paper, scissors", "good luck");
-  console.log(choice);
+function getHumanChoice(rock, paper, scissors) {
+  let choice = prompt("rock paper scissors");
+  if (choice.toLowerCase() === "rock") {
+    return "rock";
+  } else if (choice.toLowerCase() === "paper") {
+    return "paper";
+  } else if (choice.toLowerCase() === "scissors") {
+    return "scissors";
+  } else {
+    alert("NO CHEATING!");
+  }
 }
 
-
-
-
-humanScore = 0;
-computerScore = 0;
-
-//plays a round of the game. first asking human choice. then displaying computer choice. adds labels to both.
-///function calls gethumanchoice function then calls getcomputerchoice function logs both results then procee
-///-ds to log name of player. Game is always played Human first.
-//
-//
-
+let humanScore = 0;
+let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playRound(humanSelection, computerSelection) {
 
+/*function to play a round. human first then computer. determine winner. add 1 to score. alert win or loss*/
+function playRound(humanChoice, computerChoice) {
+  console.log(humanChoice);
+  console.log(computerChoice);
+  if (humanSelection && computerSelection === "rock") {
+    console.log("tie");
+  }
 }
 
+playRound(humanSelection, computerSelection);
